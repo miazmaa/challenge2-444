@@ -68,6 +68,14 @@ scene.add(fishTail);
 fishTail.rotation.z = Math.PI / -2;
 fishTail.scale.set(1,0.5,0.5);
 fishTail.position.set(-4.5,1,0.5);
+
+//fish eye
+const fishEyeGeometry = new THREE.SphereGeometry(0.2,10,10);
+const fishEyeMaterial = new THREE.MeshBasicMaterial({color: 0x000000});
+const fishEye = new THREE.Mesh(fishEyeGeometry, fishEyeMaterial);
+scene.add(fishEye);
+fishEye.position.set(-2.5,1.5, 1.8);
+
 function createAnimal(xPosition, bodyColor) {
 
     const animal = new THREE.Group();
