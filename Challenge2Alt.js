@@ -97,7 +97,7 @@ function createAnimal(xPosition, bodyColor) {
     );
 
     tail.position.set(0, 2.3, 0.3);
-
+    tail.scale.set(1,2,1)
     // Rotation
     tail.rotation.z = Math.PI / 3;
 
