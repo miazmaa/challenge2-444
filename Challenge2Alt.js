@@ -112,10 +112,10 @@ function createAnimal(xPosition, bodyColor) {
         );
 
     const legPositions = [
-        [-1, 0.75, -0.5],
-        [1, 0.75, -0.5],
-        [-1, 0.75, 0.5],
-        [1, 0.75, 0.5]
+        [1, 0.75, -0.6],
+        [2.5, 0.75, -0.6],
+        [1, 0.75, 0.6],
+        [2.5, 0.75, 0.6]
     ];
 
     legPositions.forEach(pos => {
@@ -146,7 +146,7 @@ function createAnimal(xPosition, bodyColor) {
     );
 
     leftEye.position.set(
-        2.8,
+        4.7,
         2.2,
         0.25
     );
@@ -159,7 +159,7 @@ function createAnimal(xPosition, bodyColor) {
     );
 
     rightEye.position.set(
-        2.8,
+        4.7,
         2.2,
         -0.25
     );
@@ -182,7 +182,7 @@ const toyBall = new THREE.Mesh(
     })
 );
 
-toyBall.position.set(3, 0.4, 0);
+toyBall.position.set(6, 0.4, 0);
 
 scene.add(toyBall);
 
