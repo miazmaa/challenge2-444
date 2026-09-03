@@ -67,8 +67,8 @@ function createAnimal(xPosition, bodyColor) {
         material
     );
 
-    body.position.set(0, 1.5, 0);
-
+    body.position.set(2, 1.3, 0);
+    body.scale.set(1,1,1)
     animal.add(body);
 
     // HEAD
@@ -78,10 +78,10 @@ function createAnimal(xPosition, bodyColor) {
     );
 
     // Translation
-    head.position.set(2, 2, 0);
+    head.position.set(4, 2, 0);
 
     // Scaling
-    head.scale.set(1.2, 1.2, 1.2);
+    head.scale.set(.8, .8, .8);
 
     animal.add(head);
 
@@ -96,10 +96,10 @@ function createAnimal(xPosition, bodyColor) {
         material
     );
 
-    tail.position.set(-1.8, 2, 0);
+    tail.position.set(0, 2.3, 0.3);
 
     // Rotation
-    tail.rotation.z = Math.PI / 4;
+    tail.rotation.z = Math.PI / 3;
 
     animal.add(tail);
 
