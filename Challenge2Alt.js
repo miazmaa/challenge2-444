@@ -53,13 +53,21 @@ ground.rotation.x = -Math.PI / 2;
 
 scene.add(ground);
 //fish body
-const fishGeometry = new THREE.CapsuleGeometry(0.3,0.5,10);
+const fishGeometry = new THREE.CapsuleGeometry(0.6,0.5,10);
 const fishMaterial = new THREE.MeshBasicMaterial({ color: 0x00ffff});
 const fishBody = new THREE.Mesh(fishGeometry, fishMaterial);
 scene.add(fishBody);
-fishBody.position.set(-3,1,1.5);
+fishBody.position.set(-3,1.4,1.5);
 fishBody.rotation.z = Math.PI / 2
 
+//fish tail
+const fishTailGeometry = new THREE.ConeGeometry(0.5,2,5);
+const fishTailMaterial = new THREE.MeshBasicMaterial({color: 0x0000ff});
+const fishTail = new THREE.Mesh(fishTailGeometry, fishTailMaterial);
+scene.add(fishTail);
+fishTail.rotation.z = Math.PI / -2;
+fishTail.scale.set(1,0.5,0.5);
+fishTail.position.set(-4.5,1,0.5);
 function createAnimal(xPosition, bodyColor) {
 
     const animal = new THREE.Group();
