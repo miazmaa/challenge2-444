@@ -52,6 +52,13 @@ const ground = new THREE.Mesh(
 ground.rotation.x = -Math.PI / 2;
 
 scene.add(ground);
+//fish body
+const fishGeometry = new THREE.CapsuleGeometry(0.3,0.5,10);
+const fishMaterial = new THREE.MeshBasicMaterial({ color: 0x00ffff});
+const fishBody = new THREE.Mesh(fishGeometry, fishMaterial);
+scene.add(fishBody);
+fishBody.position.set(-3,1,1.5);
+fishBody.rotation.z = Math.PI / 2
 
 function createAnimal(xPosition, bodyColor) {
 
@@ -210,6 +217,7 @@ for (let i = -10; i <= 10; i += 4) {
 
     scene.add(tree);
 }
+
 
 // Animation Loop
 function animate() {
